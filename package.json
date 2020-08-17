@@ -1,0 +1,25 @@
+{
+  "name": "@rahul_tripathi/galaxy",
+  "version": "1.0.0",
+  "description": "tiny api routing library for aws lambda",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahultripathidev/galaxy.git"
+  },
+  "keywords": [
+    "awslambda",
+    "nodejs",
+    "webserver",
+    "routing"
+  ],
+  "author": "rahul_tripathi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahultripathidev/galaxy/issues"
+  },
+  "homepage": "https://github.com/rahultripathidev/galaxy#readme"
+}
