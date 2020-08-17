@@ -5,7 +5,7 @@
 Galaxy is a tiny routing framework for Nodejs and AWS Lambda  λ;
 
 ## Installing Galaxy
-     $ npm -i @rahul_tripathi/galaxy
+     $ npm i @rahul_tripathi/galaxy
 
 ## Using Galaxy 
 
