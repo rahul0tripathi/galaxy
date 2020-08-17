@@ -9,7 +9,7 @@ Galaxy is a tiny routing framework for Nodejs and AWS Lambda  λ;
 
 ## Using Galaxy 
 
- - Galaxy has three main  route handlers (Galaxy , Starts , Moon) and
+ - Galaxy has three main  route handlers (Galaxy , Stars , Moon) and
    Moon is the route handler which has the corresponding function
  - The resolve function takes the event object as the parameter and
    passes that event object to the corresponding handler function along

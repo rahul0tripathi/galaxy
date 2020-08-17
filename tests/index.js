@@ -8,7 +8,7 @@ handler = (api)=>{
 let test1Router = galaxy.Star('test1')
 test1Router.append(galaxy.Moon('$id',handler,'POST'))
 let starRouter = galaxy.Star('streams')
-starRouter.append(galaxy.Moon('$id', handler ,'GET'))
+starRouter.append(galaxy.Moon('hello', handler ,'GET'))
 apiRouter.append(starRouter,test1Router)
 apiRouter.append(galaxy.Moon('hello/$id', handler,'GET'))
 apiRouter.append(galaxy.Moon('hello/$kk/mnop', handler,'GET'))
