@@ -58,6 +58,8 @@ function append(...stars) {
             obj.depth.forEach(child => {
                 child.path = this.path + '/' + child.path
             })
+        } else if (obj.type === 'Moon') {
+            obj.str += '$'
         }
         obj.regex = new RegExp(obj.str)
         this.depth.push(obj)
@@ -76,12 +78,8 @@ const responses = {
         body: "Internal Server Error (Galaxy " + GALAXY_VERSION + ")"
     }
 }
-const buildErr = (event, code) => {
+const buildErr = (code) => {
     let res = responses[code]
-    res.headers = {
-        ...res.headers,
-        ...event.headers || {}
-    }
     return new Promise((resolve) => {
         resolve(res)
     })
@@ -115,14 +113,14 @@ function resolver(event) {
                         }
                     }
                 }
-                return buildErr(event, '404')
+                return buildErr('404')
             } else {
-                return buildErr(event, '404')
+                return buildErr('404')
             }
         } else {
-            return buildErr(event, '404')
+            return buildErr('404')
         }
     } catch (err) {
-        return buildErr(event, '500')
+        return buildErr('500')
     }
 }

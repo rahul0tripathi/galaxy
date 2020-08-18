@@ -19,11 +19,11 @@ console.log(apiRouter.resolve({
 }))
 console.log(apiRouter.resolve({
     httpMethod: 'GET',
-    path: '/api/helloB?abc=k'
+    path: '/api/helloB'
 }))
 console.log(apiRouter.resolve({
     httpMethod: 'GET',
-    path: '/api/hello/abc/mnop?abc=k'
+    path: '/api/hello/abc/mnopppppppppppp'
 }))
 console.log(apiRouter.resolve({
     httpMethod: 'POST',

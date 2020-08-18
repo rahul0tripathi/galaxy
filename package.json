@@ -1,6 +1,6 @@
 {
   "name": "@rahul_tripathi/galaxy",
-  "version": "1.0.1-beta",
+  "version": "1.0.2-beta",
   "description": "tiny api routing library for aws lambda",
   "main": "index.js",
   "scripts": {
