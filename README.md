@@ -20,10 +20,10 @@ Galaxy is a tiny routing framework for Nodejs and AWS Lambda  λ;
 ## - creating a route path in galaxy
 
 ```js
-    let  galaxy  =  require('@rahul_tripathi/galaxy')
-    let  apiRouter  =  galaxy.Galaxy('api') //initalize with /api endpoint
-    handler = (x)=>{return x}
-    let  testRouter  =  galaxy.Star('test1') // create an intermediate router 
+    const galaxy = require('@rahul_tripathi/galaxy')
+    let apiRouter = galaxy.Galaxy('api') //initalize with /api endpoint
+    handler = (x)=>{ return x }
+    let testRouter = galaxy.Star('test1') // create an intermediate router 
     testRouter.append(galaxy.Moon('hello', handler ,'GET'))
     apiRouter.append(testRouter) 
     console.log(apiRouter.resolve({httpMethod :'GET',path:'/api/test1/hello'}))
@@ -32,12 +32,12 @@ Galaxy is a tiny routing framework for Nodejs and AWS Lambda  λ;
 ## - accepting params in galaxy
 
  ```js
-  let  galaxy  =  require('@rahul_tripathi/galaxy')
-    let  apiRouter  =  galaxy.Galaxy('api') //initalize with /api endpoint
-    handler = (x)=>{return x}
-    apiRouter.append(galaxy.Moon('hello/$id/someother', handler,'GET')) //directly adding Moon to Galaxy is allowed 
-    console.log(apiRouter.resolve({httpMethod  :  'GET',path  :'/api/hello/abc/mnop?abc=k'}))
-    //This Outputs 
+  const galaxy = require('@rahul_tripathi/galaxy')
+  let apiRouter = galaxy.Galaxy('api') //initalize with /api endpoint
+  handler = (x)=>{ return x }
+  apiRouter.append(galaxy.Moon('hello/$id/someother', handler,'GET')) //directly adding Moon to Galaxy is allowed 
+  console.log(apiRouter.resolve({httpMethod  :  'GET',path  :'/api/hello/abc/mnop?abc=k'}))
+  //This Outputs 
 {
   httpMethod: 'GET',
   path: '/api/hello/abc/someother?abc=k',
